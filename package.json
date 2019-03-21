@@ -1,0 +1,30 @@
+{
+  "name": "zwave-module",
+  "version": "1.0.0",
+  "description": "Communication module for Z-Wave protocol ",
+  "main": "core/zwaveModule.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node -r dotenv/config core/zwaveModule.js dotenv_config_path=./.env",
+    "dev": "nodemon"
+  },
+  "author": "Martin Stradiot",
+  "dependencies": {
+    "async-mqtt": "^2.0.0",
+    "dotenv": "^6.2.0",
+    "openzwave-shared": "^1.4.7",
+    "trycatch": "^1.5.21"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.9"
+  },
+  "nodemonConfig": {
+    "watch": [
+      "core/"
+    ],
+    "ignore": [
+      "node_modules/"
+    ],
+    "exec": "node -r dotenv/config core/zwaveModule.js dotenv_config_path=./.env"
+  }
+}
