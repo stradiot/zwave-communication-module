@@ -2,6 +2,7 @@ const config = Object.freeze({
   USER_PATH: process.env.USER_PATH,
   INTERFACE: process.env.INTERFACE,
   MODULE_ID: process.env.MODULE_ID,
+  MODULE_TYPE: process.env.MODULE_TYPE,
   MODULE_INFO: process.env.MODULE_INFO,
   MQTT: {
     brokerAddress: process.env.MQTT_BROKER,

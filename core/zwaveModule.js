@@ -109,7 +109,7 @@ mqtt.emitter.on('request', ({ topic, request }) => {
 const resolveAllModulesRequest = function (request) {
   switch (request.request) {
     case 'identifyModule': {
-      mqtt.publish('moduleManagement', 'moduleIdentify', {moduleInfo: config.MODULE_INFO, available: true});
+      mqtt.publish('moduleManagement', 'moduleIdentify', { info: config.MODULE_INFO, available: true, type: config.MODULE_TYPE });
       break;
     }
   };

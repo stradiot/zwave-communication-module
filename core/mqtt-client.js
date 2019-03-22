@@ -20,7 +20,7 @@ const options = {
 const client = MQTT.connect(broker, options);
 
 client.on('connect', () => {
-    publish('moduleManagement', 'stateChange', { state: 'connected', moduleInfo: config.MODULE_INFO, available: false })
+    publish('moduleManagement', 'stateChange', { state: 'connected', info: config.MODULE_INFO, available: false, type: config.MODULE_TYPE })
       .then(() => client.subscribe(`${moduleId}/+`, { qos: 2 }))
       .then(() => client.subscribe('allModules', { qos: 2 }));
 });
